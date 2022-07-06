@@ -1,0 +1,1 @@
+true_angle = image_angle;

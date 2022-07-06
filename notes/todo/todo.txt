@@ -1,0 +1,18 @@
+PRIMARY FEATURES:
+-Change selected unit when player unit dies
+-Display stats of ship when hovering
+	-display stats of enemy ships if hovering over them as well
+-Dash cooldown and skill system
+-Weapon select
+-Capturing bases
+-Allow non-controlled player ships to toggle AI
+-Fix enemy flee AI
+
+CONTENT:
+-Support ship
+	-heals enemy crew
+
+COMPLETE:
+-Assault ship
+	-heat seeking missile
+-Display outline around ships to draw team color
