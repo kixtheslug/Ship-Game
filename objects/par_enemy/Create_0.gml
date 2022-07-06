@@ -43,6 +43,7 @@ exploreX = x + lengthdir_x(distanceToExplore, angleToExplore)
 exploreY = y + lengthdir_y(distanceToExplore, angleToExplore)
 
 //built in var
+image_speed = 0;
 speed = 0;
 
 /*----PARTICLES----*/

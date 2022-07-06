@@ -1,4 +1,5 @@
 draw_set_alpha(1);
+draw_sprite_ext(sprite_index,1,x,y,1,1,image_angle,c_white,1); //outline
 draw_self()
 
 var currentHealth = (hp/maxhp)*100

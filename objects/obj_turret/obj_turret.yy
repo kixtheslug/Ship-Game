@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_turret_base_player",
-    "path": "sprites/spr_turret_base_player/spr_turret_base_player.yy",
+    "name": "spr_turret_barrel_player",
+    "path": "sprites/spr_turret_barrel_player/spr_turret_barrel_player.yy",
   },
   "solid": false,
   "visible": true,

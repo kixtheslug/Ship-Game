@@ -10,7 +10,6 @@ weaponType = Game_ListHandler.weaponList.peashooter;
 canShoot = true
 
 //AI
-true_angle = 0;
 target = noone;
 viewRad = 1200
 zone = noone
