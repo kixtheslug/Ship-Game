@@ -1,0 +1,42 @@
+{
+  "spriteId": {
+    "name": "spr_player_assault",
+    "path": "sprites/spr_player_assault/spr_player_assault.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "Par_player",
+    "path": "objects/Par_player/Par_player.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"selected","path":"objects/Par_player/Par_player.yy",},"objectId":{"name":"Par_player","path":"objects/Par_player/Par_player.yy",},"value":"0","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Player",
+    "path": "folders/Objects/Entities/Player.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "obj_player_assault",
+  "tags": [],
+  "resourceType": "GMObject",
+}

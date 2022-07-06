@@ -5,10 +5,10 @@ draw_set_color(c_white);
 //draw turret
 if(team = Game_ListHandler.teamList.player){
 	draw_sprite(spr_turret_base_player,0,x,y);
-	draw_sprite_ext(spr_turret_barrel_player,0,x,y,1,1,direction,c_white,1);
+	if(!destroyed) draw_sprite_ext(spr_turret_barrel_player,0,x,y,1,1,direction,c_white,1);
 } else {
 	draw_sprite(spr_turret_base_enemy,0,x,y);
-	draw_sprite_ext(spr_turret_barrel_enemy,0,x,y,1,1,direction,c_white,1);
+	if(!destroyed) draw_sprite_ext(spr_turret_barrel_enemy,0,x,y,1,1,direction,c_white,1);
 }
 
 //healthbar

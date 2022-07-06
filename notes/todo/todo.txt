@@ -13,6 +13,7 @@ PRIMARY FEATURES:
 	-control changing
 		-presets
 When turrets are destroyed just draw the base and not the turret head
+Damaged things smoke
 
 CONTENT:
 -Support ship

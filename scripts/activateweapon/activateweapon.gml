@@ -7,6 +7,9 @@ function ActivateWeapon(origin, dir, isEnemy){
 		case Game_ListHandler.weaponList.missilearray:
 			Weapon_MissileArray(origin, dir, isEnemy);
 			break;
+		case Game_ListHandler.weaponList.missilefront:
+			Weapon_MissileFront(origin, dir, isEnemy);
+			break;
 		default:
 			break;
 	}

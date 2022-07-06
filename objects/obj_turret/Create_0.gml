@@ -1,5 +1,7 @@
 event_inherited();
 
+destroyed = false;
+
 //stats
 maxhp = 250;
 hp = maxhp;
