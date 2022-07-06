@@ -1,19 +1,18 @@
 {
-  "name": "obj_proj_laser",
   "spriteId": {
     "name": "spr_proj_laser",
     "path": "sprites/spr_proj_laser/spr_proj_laser.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "Par_projectile",
     "path": "objects/Par_projectile/Par_projectile.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -35,6 +34,7 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_proj_laser",
   "tags": [],
   "resourceType": "GMObject",
 }

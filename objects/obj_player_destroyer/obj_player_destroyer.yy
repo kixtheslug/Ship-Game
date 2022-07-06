@@ -1,19 +1,18 @@
 {
-  "name": "obj_player_destroyer",
   "spriteId": {
     "name": "spr_player_destroyer",
     "path": "sprites/spr_player_destroyer/spr_player_destroyer.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "Par_player",
     "path": "objects/Par_player/Par_player.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -37,6 +36,7 @@
     "path": "folders/Objects/Entities/Player.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_player_destroyer",
   "tags": [],
   "resourceType": "GMObject",
 }

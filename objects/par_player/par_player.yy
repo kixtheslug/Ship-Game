@@ -1,19 +1,18 @@
 {
-  "name": "Par_player",
   "spriteId": {
     "name": "spr_player_fighter",
     "path": "sprites/spr_player_fighter/spr_player_fighter.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "Par_Entity",
     "path": "objects/Par_Entity/Par_Entity.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -44,6 +43,7 @@
     "path": "folders/Objects/Entities/Player.yy",
   },
   "resourceVersion": "1.0",
+  "name": "Par_player",
   "tags": [],
   "resourceType": "GMObject",
 }

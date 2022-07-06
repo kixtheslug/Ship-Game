@@ -34,6 +34,7 @@ hasRoute = false
 if(instance_exists(Par_enemy)) target = instance_nearest(x,y,Par_enemy);
 
 //special vars
+image_speed = 0;
 speed = 0;
 
 /*----PARTICLES----*/

@@ -1,16 +1,15 @@
 {
-  "name": "Par_projectile",
   "spriteId": {
     "name": "spr_proj_missile",
     "path": "sprites/spr_proj_missile/spr_proj_missile.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": null,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -34,6 +33,7 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "resourceVersion": "1.0",
+  "name": "Par_projectile",
   "tags": [],
   "resourceType": "GMObject",
 }

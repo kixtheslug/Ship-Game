@@ -1,19 +1,18 @@
 {
-  "name": "obj_enemy_fighter",
   "spriteId": {
     "name": "spr_enemy_fighter",
     "path": "sprites/spr_enemy_fighter/spr_enemy_fighter.yy",
   },
-  "spriteMaskId": null,
-  "visible": true,
   "solid": false,
-  "persistent": false,
-  "physicsObject": false,
+  "visible": true,
   "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
   "parentObjectId": {
     "name": "Par_enemy",
     "path": "objects/Par_enemy/Par_enemy.yy",
   },
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
@@ -35,6 +34,7 @@
     "path": "folders/Objects/Entities/Enemies.yy",
   },
   "resourceVersion": "1.0",
+  "name": "obj_enemy_fighter",
   "tags": [],
   "resourceType": "GMObject",
 }
