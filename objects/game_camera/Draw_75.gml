@@ -28,9 +28,16 @@ if(selectMode){
 	draw_text(camera_width-290, 90,"Health: " + string(selectable.hp) + "/" + string(selectable.maxhp));
 	
 	draw_set_font(fnt_pixel_small)
+	draw_set_halign(fa_left);
 }
 
 if(paused){
+	//darken screen
+	draw_set_alpha(0.3);
+	draw_set_color(c_black);
+	draw_rectangle(0,0,camera_width,camera_height,0)
+	
+	//draw paused menu
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	draw_set_font(fnt_pixel_large)
@@ -40,4 +47,6 @@ if(paused){
 	draw_text(camera_width/2, 70,"Press Escape to unpause. Press R to reload level.");
 	
 	if (keyboard_check_pressed(ord("R"))) game_restart();
+	
+	draw_set_halign(fa_left);
 }

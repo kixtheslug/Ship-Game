@@ -5,14 +5,20 @@ PRIMARY FEATURES:
 -Dash cooldown and skill system
 -Weapon select
 -Capturing bases
+-Display outline around ships to draw team color
+	-add toggle for outlines
 -Allow non-controlled player ships to toggle AI
 -Fix enemy flee AI
+-pause menu
+	-control changing
+		-presets
+When turrets are destroyed just draw the base and not the turret head
 
 CONTENT:
 -Support ship
 	-heals enemy crew
+	-new AI
 
 COMPLETE:
 -Assault ship
 	-heat seeking missile
--Display outline around ships to draw team color

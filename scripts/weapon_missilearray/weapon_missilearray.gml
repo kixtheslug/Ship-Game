@@ -22,6 +22,7 @@ function Weapon_MissileArray(origin, dir, isEnemy){
 			bullet.owner = self
 			bullet.team = team
 			bullet.damage = Game_ListHandler.missilearray_damage;
+			with(bullet) motion_add(other.image_angle,other.speed);
 			canShoot = false //reset shooting timer
 			if(!isEnemy) origin.alarm[0] = room_speed*Game_ListHandler.missilearray_reload;
 			else origin.alarm[0] = room_speed*Game_ListHandler.missilearray_reload*random_range(0.8,1.2);
