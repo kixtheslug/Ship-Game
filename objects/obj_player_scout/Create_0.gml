@@ -15,4 +15,5 @@ hp = maxhp;
 weaponType = Game_ListHandler.scout_weaponType;
 
 //AI
+skill = Game_ListHandler.scout_skill;
 viewRad = Game_ListHandler.scout_viewRad

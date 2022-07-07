@@ -15,4 +15,5 @@ hp = maxhp;
 weaponType = Game_ListHandler.destroyer_weaponType;
 
 //AI
+skill = Game_ListHandler.destroyer_skill;
 viewRad = Game_ListHandler.destroyer_viewRad;

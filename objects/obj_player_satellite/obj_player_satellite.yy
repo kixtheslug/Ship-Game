@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_fighter",
-    "path": "sprites/spr_player_fighter/spr_player_fighter.yy",
+    "name": "spr_player_satellite",
+    "path": "sprites/spr_player_satellite/spr_player_satellite.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
     "path": "folders/Objects/Entities/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_fighter",
+  "name": "obj_player_satellite",
   "tags": [],
   "resourceType": "GMObject",
 }

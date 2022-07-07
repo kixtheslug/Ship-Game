@@ -4,17 +4,20 @@ PRIMARY FEATURES:
 -Dash cooldown and skill system
 -Weapon select
 -Capturing bases
--Display outline around ships to draw team color
+-Display outline around ships to draw team color (DONE)
 	-add toggle for outlines
--Allow non-controlled player ships to toggle AI
+-player ships use AI (DONE)
+	-Toggle AI
+	-make outline change to green if enabled
 -Fix enemy flee AI
 -pause menu
 	-control changing
 		-presets
-When turrets are destroyed just draw the base and not the turret head
+quick cycle units in select
 Damaged things smoke
 Make missiles detect turrets
 loss condition when all player units are dead
+debug mode
 
 CONTENT:
 -Support ship
@@ -27,3 +30,5 @@ COMPLETE:
 -Scout ship
 	-gatling gun
 -Change selected unit when player unit dies
+make player an enemy units use the same code
+When turrets are destroyed just draw the base and not the turret head

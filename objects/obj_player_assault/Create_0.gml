@@ -15,4 +15,5 @@ hp = maxhp;
 weaponType = Game_ListHandler.assault_weaponType;
 
 //AI
+skill = Game_ListHandler.assault_skill;
 viewRad = Game_ListHandler.assault_viewRad

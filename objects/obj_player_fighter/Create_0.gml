@@ -15,4 +15,5 @@ hp = maxhp;
 weaponType = Game_ListHandler.fighter_weaponType;
 
 //AI
+skill = Game_ListHandler.fighter_skill;
 viewRad = Game_ListHandler.fighter_viewRad

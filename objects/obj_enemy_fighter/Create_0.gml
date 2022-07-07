@@ -16,3 +16,4 @@ weaponType = Game_ListHandler.fighter_weaponType;
 
 //AI
 viewRad = Game_ListHandler.fighter_viewRad;
+rangeRad = viewRad+100

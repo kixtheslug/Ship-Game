@@ -16,3 +16,4 @@ weaponType = Game_ListHandler.destroyer_weaponType;
 
 //AI
 viewRad = Game_ListHandler.destroyer_viewRad;
+rangeRad = viewRad+100

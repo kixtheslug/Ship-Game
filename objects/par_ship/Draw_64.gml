@@ -1,6 +1,6 @@
 draw_set_alpha(1);
 
-if(selected){
+if(selected && playerUnit){
 	//draw healthbar
 	var currentHealth = (hp/maxhp)*100
 	draw_healthbar(10, Game_Camera.camera_height-10, 150, Game_Camera.camera_height-40, currentHealth, c_white, c_red, c_red, 0, 1, 1);
@@ -12,5 +12,7 @@ if(selected){
 	if (!Game_Camera.paused && !Game_Camera.selectMode) draw_text(10,10,"Speed: " + string(speed));
 	else draw_text(10,10,"Speed: " + string(pause_tempSpeed));
 	draw_text(10,30,"Direction: " + string(true_angle));
-	draw_text(x-10,y-20,"Coordinates: (" + string(floor(x)) + "," + string(floor(y)) + ")");
+	draw_set_halign(fa_center);
+	draw_text(Game_Camera.camera_width/2,Game_Camera.camera_height-130,"Coordinates: (" + string(floor(x)) + "," + string(floor(y)) + ")");
+	draw_set_halign(fa_left);
 }
