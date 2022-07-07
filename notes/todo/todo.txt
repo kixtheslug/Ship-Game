@@ -21,5 +21,7 @@ CONTENT:
 	-new AI
 
 COMPLETE:
--Assault ship
+-Destroyer/Assault ship
 	-heat seeking missile
+-Scout ship
+	-gatling gun

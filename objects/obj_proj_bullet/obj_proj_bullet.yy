@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_proj_laser",
-    "path": "sprites/spr_proj_laser/spr_proj_laser.yy",
+    "name": "spr_proj_bullet",
+    "path": "sprites/spr_proj_bullet/spr_proj_bullet.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,7 +24,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -32,7 +34,7 @@
     "path": "folders/Objects/Projectiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_proj_laser",
+  "name": "obj_proj_bullet",
   "tags": [],
   "resourceType": "GMObject",
 }

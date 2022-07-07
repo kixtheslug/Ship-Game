@@ -40,7 +40,7 @@ if(!Game_Camera.paused && !Game_Camera.selectMode){ //dont work if paused
 			break;
 	
 		default: //resorts to idle AI
-			Enemy_IdleAI();
+			Ship_IdleAI();
 			break;
 	}
 

@@ -6,7 +6,7 @@ if (!surface_exists(surfMinimapBg)) RefreshMapBG();
 draw_surface(surfMinimapBg,x,y);
 draw_set_color(c_white);
 draw_rectangle(x,y,x+w,y+h,1);
-draw_text(x-10,y-20,"Coordinates: (" + string(floor(Par_player.x)) + "," + string(floor(Par_player.y)) + ")");
+draw_text(x-10,y-20,"Coordinates: (" + string(floor(Game_Camera.selectedUnit.x)) + "," + string(floor(Game_Camera.selectedUnit.y)) + ")");
 
 //draw entities
 if (!surface_exists(surfMinimapEntities)) surfMinimapEntities = surface_create(w,h);

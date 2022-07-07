@@ -21,7 +21,8 @@ WEAPONS
 enum weaponList{
 	peashooter = 0,
 	missilearray = 1,
-	missilefront = 2
+	missilefront = 2,
+	gatling = 3
 }
 
 //Peashooter
@@ -39,6 +40,11 @@ missilearray_shots = 3;
 missilefront_speed = 2;
 missilefront_damage = 7;
 missilefront_reload = 1.5;
+
+//Gatling
+gatling_speed = 30;
+gatling_damage = 5;
+gatling_reload = 0.1;
 
 /*
 //////////////////////////////////////////////
@@ -86,5 +92,5 @@ scout_turnSpeed = 5;
 scout_dashSpeed = 2;
 scout_speedCap = 12;
 scout_maxHP = 10;
-scout_weaponType = weaponList.peashooter;
+scout_weaponType = weaponList.gatling;
 scout_viewRad = 2000;

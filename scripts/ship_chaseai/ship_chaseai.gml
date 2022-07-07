@@ -12,12 +12,8 @@ function Ship_ChaseAI(){
 		var facingMinusTarget = direction - targetDir;
 		var angleDiff = facingMinusTarget;
 		if(abs(facingMinusTarget) > 180){
-		    if(direction > targetDir){
-		        angleDiff = -1 * ((360 - direction) + targetDir);
-		    }
-		    else{
-		        angleDiff = (360 - targetDir) + direction;
-		    }
+		    if(direction > targetDir) angleDiff = -1 * ((360 - direction) + targetDir);
+			else angleDiff = (360 - targetDir) + direction;
 		}
 
 		// Gradually rotate object

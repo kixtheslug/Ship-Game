@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"Weapon_Gatling","path":"scripts/Weapon_Gatling/Weapon_Gatling.yy",},"order":4,},
     {"id":{"name":"map_zone","path":"sprites/map_zone/map_zone.yy",},"order":3,},
     {"id":{"name":"spr_turret_barrel_player","path":"sprites/spr_turret_barrel_player/spr_turret_barrel_player.yy",},"order":0,},
     {"id":{"name":"spr_enemy_assault","path":"sprites/spr_enemy_assault/spr_enemy_assault.yy",},"order":3,},
@@ -36,6 +37,7 @@
     {"id":{"name":"Game_Camera","path":"objects/Game_Camera/Game_Camera.yy",},"order":0,},
     {"id":{"name":"Ship_FleeAI","path":"scripts/Ship_FleeAI/Ship_FleeAI.yy",},"order":3,},
     {"id":{"name":"ActivateWeapon","path":"scripts/ActivateWeapon/ActivateWeapon.yy",},"order":0,},
+    {"id":{"name":"obj_proj_bullet","path":"objects/obj_proj_bullet/obj_proj_bullet.yy",},"order":3,},
     {"id":{"name":"obj_enemy_destroyer","path":"objects/obj_enemy_destroyer/obj_enemy_destroyer.yy",},"order":2,},
     {"id":{"name":"RotateAwayTarget","path":"scripts/RotateAwayTarget/RotateAwayTarget.yy",},"order":6,},
     {"id":{"name":"spr_player_utility","path":"sprites/spr_player_utility/spr_player_utility.yy",},"order":1,},
@@ -46,6 +48,7 @@
     {"id":{"name":"fnt_pixel_large","path":"fonts/fnt_pixel_large/fnt_pixel_large.yy",},"order":2,},
     {"id":{"name":"Ship_ChaseAI","path":"scripts/Ship_ChaseAI/Ship_ChaseAI.yy",},"order":0,},
     {"id":{"name":"Game_Particles","path":"objects/Game_Particles/Game_Particles.yy",},"order":1,},
+    {"id":{"name":"spr_proj_bullet","path":"sprites/spr_proj_bullet/spr_proj_bullet.yy",},"order":2,},
     {"id":{"name":"spr_asteroid","path":"sprites/spr_asteroid/spr_asteroid.yy",},"order":0,},
     {"id":{"name":"Level_Safezone","path":"objects/Level_Safezone/Level_Safezone.yy",},"order":1,},
     {"id":{"name":"spr_enemy_fighter","path":"sprites/spr_enemy_fighter/spr_enemy_fighter.yy",},"order":0,},
