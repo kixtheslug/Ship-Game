@@ -9,10 +9,19 @@ if(!selectMode){
 	if(instance_exists(selectedUnit)){
 		x = selectedUnit.x;
 		y = selectedUnit.y;
+	} else {
+		if(instance_exists(Par_player)){
+			var newUnit = instance_nearest(x,y,Par_player);	
+			selectedUnit = newUnit;
+			newUnit.selected = true;
+		} else {
+			selectedUnit = noone;
+			//gameover!
+		}
 	}
 } else{ //move with movement controls
 	var cameraMoveDistance = 500
-	if(distance_to_object(selectable)<cameraMoveDistance){
+	if(distance_to_object(instance_nearest(mouse_x,mouse_y,Par_player))<cameraMoveDistance){
 		var cameraMoveSpeed = 20
 		if (keyboard_check(ord("W"))) y-=cameraMoveSpeed;
 		if (keyboard_check(ord("S"))) y+=cameraMoveSpeed;

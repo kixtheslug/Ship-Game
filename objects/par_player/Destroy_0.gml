@@ -1,5 +1,5 @@
 if(selected){
-	var newUnit = instance_nearest(xprevious,yprevious,Par_player);	
+	var newUnit = instance_nearest(Game_Camera.x,Game_Camera.y,Par_player);	
 	Game_Camera.selectedUnit = newUnit;
 	newUnit.selected = true;
 }

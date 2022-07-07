@@ -1,5 +1,4 @@
 PRIMARY FEATURES:
--Change selected unit when player unit dies
 -Display stats of ship when hovering
 	-display stats of enemy ships if hovering over them as well
 -Dash cooldown and skill system
@@ -14,6 +13,8 @@ PRIMARY FEATURES:
 		-presets
 When turrets are destroyed just draw the base and not the turret head
 Damaged things smoke
+Make missiles detect turrets
+loss condition when all player units are dead
 
 CONTENT:
 -Support ship
@@ -25,3 +26,4 @@ COMPLETE:
 	-heat seeking missile
 -Scout ship
 	-gatling gun
+-Change selected unit when player unit dies

@@ -1,6 +1,6 @@
 /// @description Initialize boundary
 
-padding = 50;
+padding = 200;
 
 //change these per level
 shapes_list = ["Square"];

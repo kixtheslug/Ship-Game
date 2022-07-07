@@ -12,4 +12,5 @@ if(selected){
 	if (!Game_Camera.paused && !Game_Camera.selectMode) draw_text(10,10,"Speed: " + string(speed));
 	else draw_text(10,10,"Speed: " + string(pause_tempSpeed));
 	draw_text(10,30,"Direction: " + string(true_angle));
+	draw_text(x-10,y-20,"Coordinates: (" + string(floor(x)) + "," + string(floor(y)) + ")");
 }
