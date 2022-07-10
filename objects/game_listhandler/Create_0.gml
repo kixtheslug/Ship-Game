@@ -20,6 +20,28 @@ enum skills {
 
 /*
 //////////////////////////////////////////////
+BACKGROUNDS
+//////////////////////////////////////////////
+*/
+
+backgroundList_planets = [
+bg_planet_gas1,
+bg_planet_gas2,
+bg_planet_gas3,
+bg_planet_gas4,
+bg_planet_gas5,
+bg_planet_gas6,
+bg_planet_gas7,
+bg_planet_gas8,
+bg_planet_gas9,
+bg_planet_rings1,
+bg_planet_rings2,
+bg_planet_rings3,
+bg_planet_terr1
+]
+
+/*
+//////////////////////////////////////////////
 WEAPONS
 //////////////////////////////////////////////
 */
@@ -116,7 +138,7 @@ scout_moveSpeed = 0.8;
 scout_turnSpeed = 5;
 scout_dashSpeed = 2;
 scout_speedCap = 12;
-scout_maxHP = 10;
+scout_maxHP = 20;
 scout_weaponType = weaponList.gatling;
 scout_viewRad = 2000;
 scout_skill = skills.Dash;

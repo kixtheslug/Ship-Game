@@ -16,6 +16,7 @@ speedCp = 6;
 damp = true;
 dashing = false;
 lostControl = false;
+cloaked = false;
 
 //weapons
 weaponType = Game_ListHandler.weaponList.peashooter;

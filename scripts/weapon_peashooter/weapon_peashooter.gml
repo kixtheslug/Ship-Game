@@ -2,7 +2,7 @@ function Weapon_Peashooter(origin, dir, isEnemy){
 	if(canShoot){
 		//motion_add(image_angle, -Game_ListHandler.peashooter_recoil);//recoil
 		
-		bullet = instance_create_layer(x,y,"Objects", obj_proj_laser);
+		bullet = instance_create_layer(x,y,"Projectiles", obj_proj_laser);
 		bullet.direction = dir;
 		bullet.image_angle = dir;
 		bullet.speed = Game_ListHandler.peashooter_speed;

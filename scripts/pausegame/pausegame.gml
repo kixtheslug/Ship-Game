@@ -6,5 +6,6 @@ function PauseGame(){
 	with(Par_projectile){
 		pause_tempSpeed = speed;
 		speed = 0;
+		show_debug_message(pause_tempSpeed);
 	}
 }

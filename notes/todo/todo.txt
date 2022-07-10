@@ -8,9 +8,10 @@ PRIMARY FEATURES:
 	-add toggle for outlines
 -player ships use AI (DONE)
 	-Toggle AI
-	-make outline change to green if enabled
+	-make outline change to green if enabled (DONE)
 -Fix enemy flee AI
--pause menu
+-menus
+	-main menu
 	-control changing
 		-presets
 quick cycle units in select

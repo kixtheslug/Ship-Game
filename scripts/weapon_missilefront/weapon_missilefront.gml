@@ -1,6 +1,6 @@
 function Weapon_MissileFront(origin, dir, isEnemy){
 	if(canShoot){
-		bullet = instance_create_layer(x,y,"Objects", obj_proj_missile);
+		bullet = instance_create_layer(x,y,"Projectiles", obj_proj_missile);
 		bullet.direction = dir;
 		bullet.image_angle = dir;
 		bullet.speed = Game_ListHandler.missilefront_speed;
@@ -15,7 +15,7 @@ function Weapon_MissileFront(origin, dir, isEnemy){
 	
 	if(canShootSec){
 		for(var i = -1; i < Game_ListHandler.missilearray_shots; i+=2){
-			bullet = instance_create_layer(x,y,"Objects", obj_proj_bullet);
+			bullet = instance_create_layer(x,y,"Projectiles", obj_proj_bullet);
 			bullet.direction = dir+90*i;
 			bullet.image_angle = dir+90*i;
 			bullet.speed = Game_ListHandler.missilefront_sec_speed;

@@ -1,4 +1,4 @@
 true_angle = FindTrueAngle();
 
-//die
-if(hp<=0) instance_destroy();
+//die - dont do this cause dev mode
+//if(hp<=0) instance_destroy();

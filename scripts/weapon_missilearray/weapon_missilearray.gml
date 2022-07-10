@@ -10,7 +10,7 @@ function Weapon_MissileArray(origin, dir, isEnemy){
 		}
 		
 		for(var i = 0; i < Game_ListHandler.missilearray_shots; i++){
-			bullet = instance_create_layer(x,y,"Objects", obj_proj_missile);
+			bullet = instance_create_layer(x,y,"Projectiles", obj_proj_missile);
 			
 			if(side == 0){ //right
 				bullet.direction = dir+i*10+70;

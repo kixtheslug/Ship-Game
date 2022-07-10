@@ -1,11 +1,19 @@
 draw_set_alpha(1);
-draw_sprite_ext(sprite_index,1,x,y,1,1,image_angle,c_white,1); //outline
-draw_self()
+var enemy_outline_color = make_colour_rgb(255, 145, 145);
 
-var currentHealth = (hp/maxhp)*100
-//controls healthbar color
-if(playerUnit) draw_healthbar(x-10, y+15, x+10, y+20, currentHealth, c_white, c_green, c_green, 0, 1, 1);
-else draw_healthbar(x-10, y+15, x+10, y+20, currentHealth, c_white, c_red, c_red, 0, 1, 1);
+if(room != Menu){
+	if (AIEnabled && playerUnit && !selected) draw_sprite_ext(sprite_index,1,x,y,1,1,image_angle,c_lime,1); //green outline
+	else if (!playerUnit) draw_sprite_ext(sprite_index,1,x,y,1,1,image_angle,enemy_outline_color,1); //enemy outline
+	else draw_sprite_ext(sprite_index,1,x,y,1,1,image_angle,c_white,1); //normal outline
+	draw_self();
+
+	var currentHealth = (hp/maxhp)*100
+	//controls healthbar color
+	if (!invincible){
+		if(playerUnit) draw_healthbar(x-10, y+15, x+10, y+20, currentHealth, c_white, c_green, c_green, 0, 1, 1);
+		else draw_healthbar(x-10, y+15, x+10, y+20, currentHealth, c_white, c_red, c_red, 0, 1, 1);
+	}
+} else draw_self();
 
 if (global.showAdvancedInfo && AIEnabled) {
 	draw_set_colour(c_red);
