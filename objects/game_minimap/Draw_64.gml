@@ -1,6 +1,7 @@
 /// @description Draw minimap
+x = Game_Camera.camera_width/2-w/2;
 
-if(room != Menu){
+if(room != Menu && !Game_Camera.paused){
 	draw_set_alpha(0.75)
 
 	//draw background
@@ -13,20 +14,6 @@ if(room != Menu){
 	if (!surface_exists(surfMinimapEntities)) surfMinimapEntities = surface_create(w,h);
 	surface_set_target(surfMinimapEntities);
 	draw_clear_alpha(c_black,0);
-	
-	//draw planet
-	draw_sprite_ext
-	(
-		Level_Boundary.planet,
-		0,
-		Level_Boundary.planetPosX/Game_Minimap.scale,
-		Level_Boundary.planetPosY/Game_Minimap.scale,
-		Level_Boundary.planetScale/Game_Minimap.scale,
-		Level_Boundary.planetScale/Game_Minimap.scale,
-		Level_Boundary.planetRot,
-		c_white,
-		0.75
-	);
 
 	//Level_Safezone
 	with (Level_Safezone){
@@ -74,7 +61,7 @@ if(room != Menu){
 		);
 	}
 	//asteroid
-	with (obj_asteroid){
+	with (Par_resource){
 		draw_sprite_ext
 		(
 			map_asteroid,

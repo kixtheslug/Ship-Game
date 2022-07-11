@@ -3,7 +3,7 @@ surfMinimapEntities = -1;
 scale = 80;
 w = room_width/scale;
 h = room_height/scale;
-x = 750-w
+x = camera_get_view_width(view_camera[0])/2;
 y = view_hport[0]-h-10
 
 //Refresh background

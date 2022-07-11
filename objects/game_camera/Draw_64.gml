@@ -36,7 +36,7 @@ if(room != Menu){
 
 	if(paused){
 		//darken screen
-		draw_set_alpha(0.3);
+		draw_set_alpha(0.75);
 		draw_set_color(c_black);
 		draw_rectangle(0,0,camera_width,camera_height,0)
 	

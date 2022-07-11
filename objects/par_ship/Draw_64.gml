@@ -1,6 +1,6 @@
 draw_set_alpha(1);
 
-if(selected && playerUnit){
+if(selected && playerUnit && !Game_Camera.paused){
 	//draw healthbar
 	var currentHealth = (hp/maxhp)*100
 	draw_healthbar(10, Game_Camera.camera_height-10, 150, Game_Camera.camera_height-40, currentHealth, c_white, c_red, c_red, 0, 1, 1);

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background",
-    "path": "folders/Sprites/Environment/Background.yy",
+    "name": "Planets",
+    "path": "folders/Sprites/Environment/Background/Planets.yy",
   },
   "resourceVersion": "1.0",
   "name": "bg_planet_gas7",

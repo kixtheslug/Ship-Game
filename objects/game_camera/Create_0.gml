@@ -10,28 +10,26 @@ with(Par_player){
 }
 
 // Initialise Viewports
+cameraX = 0;
+cameraY = 0;
+camera_width = 1240
+camera_height = 700
+
 view_enabled = true;
 view_visible[0] = true;
+camera_set_view_size(view_camera[0], camera_width, camera_height);
 
-view_xport[0] = 0;
-view_yport[0] = 0;
-view_wport[0] = 1400;
-view_hport[0] = 700;
+display_scale = 1;
+display_width = camera_width * display_scale;
+display_height = camera_height * display_scale;
 
-camera_width = 1400
-camera_height = 700
-view_camera[0] = camera_create_view(selectedUnit.x-camera_width/2, selectedUnit.y-camera_height/2, camera_width, camera_height, 0, selectedUnit, 20, 20, camera_width, camera_height);
-
-var _dwidth = display_get_width();
-var _dheight = display_get_height();
-var _xpos = (_dwidth / 2) - 480;
-var _ypos = (_dheight / 2) - 270;
-window_set_rectangle(_xpos, _ypos, 1400, 700);
-surface_resize(application_surface, 1400, 700);
+window_set_size(display_width,display_height);
+surface_resize(application_surface,display_width,display_height);
 
 //Zoom
 zoom_level = 1;
 zoom_rate = 0.25;
 
 //UI
+display_set_gui_size(camera_width,camera_height);
 global.showAdvancedInfo = false;

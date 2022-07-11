@@ -1,13 +1,8 @@
-/// @description Insert description here
 event_inherited();
 
-lostControl = false
-team = noone;
-
-//randomize sprite
-image_speed = 0;
-image_index = irandom(2);
-
-//health
-maxhp = 50;
-hp = maxhp;
+sprite_list = [
+spr_asteroid1,
+spr_asteroid2,
+spr_asteroid3,
+]
+sprite_index = sprite_list[irandom_range(0,array_length(sprite_list)-1)];
