@@ -14,11 +14,9 @@ PRIMARY FEATURES:
 	-main menu
 	-control changing
 		-presets
-quick cycle units in select
 Damaged things smoke
 Make missiles detect turrets
 loss condition when all player units are dead
-debug mode
 
 CONTENT:
 -Support ship
@@ -33,3 +31,5 @@ COMPLETE:
 -Change selected unit when player unit dies
 make player an enemy units use the same code
 When turrets are destroyed just draw the base and not the turret head
+quick cycle units in select
+debug mode

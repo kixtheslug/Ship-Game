@@ -12,3 +12,14 @@ DevMode = false;
 dev_invinciblePlayer = false;
 dev_invincibleEnemies = false;
 dev_endlessZoom = false;
+
+//settings options
+settingsActive = false;
+currSel = 0;
+SettingsOptions = [ //for the main menu
+"Graphics",
+"Audio",
+"Gameplay",
+"Controls",
+"Return"
+]

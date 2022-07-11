@@ -20,7 +20,7 @@ if(room != Menu){
 		draw_set_halign(fa_center);
 		draw_text(camera_width/2, 30,"SELECT MODE ACTIVE");
 		draw_set_font(fnt_pixel_small)
-		draw_text(camera_width/2, 70,"Hold Ctrl and use WASD to pan view. Click to swap to highlighted unit.");
+		draw_text(camera_width/2, 70,"Press Shift to rotate units. Click to swap to highlighted unit.");
 	
 		//draw unit stats
 		draw_set_font(fnt_pixel_large)

@@ -8,6 +8,7 @@ paused = false;
 with(Par_player){
 	if(selected) Game_Camera.selectedUnit = self;
 }
+canSelect = true;
 
 // Initialise Viewports
 cameraX = 0;

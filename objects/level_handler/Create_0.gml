@@ -12,3 +12,9 @@ switch (shape){
 	default:
 		break;
 }
+
+//for menu
+menu_NumberPlayer = 5;
+menu_NumberEnemy = 5;
+menu_NumberAsteroid = 25;
+menu_NumberIce = 4;

@@ -11,7 +11,7 @@ if(room == Menu){
 		if(currSel == i) draw_set_color(c_yellow); //change color for selected option
 		else draw_set_color(c_white);
 		
-		draw_text(room_width/2, 200+i*30,MainOptions[i]);
+		draw_text(Game_Camera.camera_width/2, 200+i*30,MainOptions[i]);
 	}	
 
 
@@ -34,6 +34,7 @@ if(room == Menu){
 				break;
 				
 			case 2: //settings
+				Settings.alarm[0] = 1;
 				break;
 				
 			case 3: //quit
@@ -78,6 +79,7 @@ if(room == Menu){
 				break;
 				
 			case 2: //settings
+				Settings.alarm[0] = 1;
 				break;
 				
 			case 3: //quit to menu

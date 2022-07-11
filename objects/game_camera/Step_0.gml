@@ -1,25 +1,15 @@
-//Control Zoom
-
-cameraX = selectedUnit.x - camera_width*zoom_level/2;
-cameraY = selectedUnit.y - camera_height*zoom_level/2;
-
-cameraX = clamp(cameraX, 0, room_width-camera_width*zoom_level);
-cameraY = clamp(cameraY, 0, room_width-camera_height*zoom_level);
-
-camera_set_view_pos(view_camera[0], cameraX, cameraY);
-
-/*if(instance_exists(selectedUnit)){
-	global.cameraX = selectedUnit.x - camera_width/2;
-	global.cameraY = selectedUnit.y - camera_width/2;
-	
-	
-}
-camera_set_view_pos(view_camera[0],global.cameraX,global.cameraY);*/
-
-camera_set_view_size(view_camera[0], camera_width*zoom_level, camera_height*zoom_level)
-camera_set_view_speed(view_camera[0], 20*zoom_level, 20*zoom_level)
-
 if(room != Menu){
+	cameraX = selectedUnit.x - camera_width*zoom_level/2;
+	cameraY = selectedUnit.y - camera_height*zoom_level/2;
+
+	cameraX = clamp(cameraX, 0, room_width-camera_width*zoom_level);
+	cameraY = clamp(cameraY, 0, room_width-camera_height*zoom_level);
+	
+	camera_set_view_size(view_camera[0], camera_width*zoom_level, camera_height*zoom_level)
+	camera_set_view_speed(view_camera[0], 20*zoom_level, 20*zoom_level)
+
+	camera_set_view_pos(view_camera[0], cameraX, cameraY);
+	
 	if (mouse_wheel_down() || keyboard_check_pressed(vk_add)) if (zoom_level < 2 || Settings.dev_endlessZoom) zoom_level += zoom_rate; //zoom out
 	if (mouse_wheel_up()) if (zoom_level > 0.5 || Settings.dev_endlessZoom) zoom_level -= zoom_rate; //zoom in
 
@@ -51,6 +41,18 @@ if(room != Menu){
 				y = selectedUnit.y;
 			}
 		}
+		
+		if(keyboard_check_pressed(vk_shift)){ //switch between ships
+			canSelect = true;
+			with(Par_player){
+				if(self != Game_Camera.selectedUnit && !hasBeenSelected && Game_Camera.canSelect){
+					hasBeenSelected = true;
+					Game_Camera.selectedUnit = self;
+					Game_Camera.canSelect = false;
+				}
+			}
+		}
+		if(canSelect) with(Par_player) hasBeenSelected = false; //can only happen if there's no available units, in which case it resets
 	}
 
 	with(Par_player){ //change view if new unit is selected
@@ -87,4 +89,4 @@ if(room != Menu){
 			paused = true;
 		}
 	}
-}
+} else camera_set_view_size(view_camera[0], camera_width, camera_height)

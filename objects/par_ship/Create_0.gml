@@ -1,5 +1,7 @@
 event_inherited();
 
+hasBeenSelected = false;
+
 //stats - uses fighter stats by default
 movespd = Game_ListHandler.fighter_moveSpeed;
 rotatespd = Game_ListHandler.fighter_turnSpeed;
