@@ -15,6 +15,13 @@ if(room != Menu){
 	}
 } else draw_self();
 
+if(selected && playerUnit){
+	if(smartTarget != noone && instance_exists(smartTarget)){
+		draw_sprite_ext(UI_target,0,smartTarget.x,smartTarget.y,1,1,targetRot,c_white,1); //target reticule
+		targetRot++
+	}
+}
+
 if (global.showAdvancedInfo && AIEnabled) {
 	draw_set_colour(c_red);
 	draw_set_alpha(0.25);

@@ -27,8 +27,8 @@ if(room != Menu){
 		draw_text(camera_width-165, 30,"Player Unit");
 		draw_set_halign(fa_left);
 		draw_set_font(fnt_pixel_small)
-		draw_text(camera_width-290, 90,"Health: " + string(selectable.hp) + "/" + string(selectable.maxhp));
-		draw_text(camera_width-290, 90,"Health: " + string(selectable.hp) + "/" + string(selectable.maxhp));
+		draw_text(camera_width-290, 90,"Unit Stats");
+		draw_text(camera_width-290, 120,"Health: " + string(selectable.hp) + "/" + string(selectable.maxhp));
 	
 		draw_set_font(fnt_pixel_small)
 		draw_set_halign(fa_left);

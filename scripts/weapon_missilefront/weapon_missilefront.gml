@@ -22,9 +22,11 @@ function Weapon_MissileFront(origin, dir, isEnemy){
 			bullet.owner = self
 			bullet.team = team
 			bullet.damage = Game_ListHandler.missilefront_sec_damage;
+			if(smartTarget != noone){
+				bullet.target = smartTarget;
+				bullet.targetLock = true;
+			}
 		}
-		
-		
 		
 		
 		with(bullet) motion_add(other.image_angle,other.speed);

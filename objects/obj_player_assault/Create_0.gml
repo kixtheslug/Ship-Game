@@ -14,6 +14,11 @@ hp = maxhp;
 //weapons
 weaponType = Game_ListHandler.assault_weaponType;
 
-//AI
+//skill
 skill = Game_ListHandler.assault_skill;
+skillMaxDuration = Game_ListHandler.assault_skill_duration*room_speed;
+skillDuration = skillMaxDuration;
+skillRegen = Game_ListHandler.assault_skill_regen;
+
+//AI
 viewRad = Game_ListHandler.assault_viewRad

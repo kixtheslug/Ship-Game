@@ -10,8 +10,12 @@ if(room != Menu){
 
 	camera_set_view_pos(view_camera[0], cameraX, cameraY);
 	
-	if (mouse_wheel_down() || keyboard_check_pressed(vk_add)) if (zoom_level < 2 || Settings.dev_endlessZoom) zoom_level += zoom_rate; //zoom out
-	if (mouse_wheel_up()) if (zoom_level > 0.5 || Settings.dev_endlessZoom) zoom_level -= zoom_rate; //zoom in
+	//increase/decrease zoom level
+	if (mouse_wheel_down() || keyboard_check_pressed(vk_add)) if (target_zoom_level < 2 || Settings.dev_endlessZoom) target_zoom_level += zoom_rate; //zoom out
+	if (mouse_wheel_up()) if (target_zoom_level > 0.5 || Settings.dev_endlessZoom) target_zoom_level -= zoom_rate; //zoom in
+	//change zoom to match zoom level - creates a smoother zoom effect
+	if(zoom_level > target_zoom_level) zoom_level -= zoom_buffer
+	else if(zoom_level < target_zoom_level) zoom_level += zoom_buffer
 
 	if(!selectMode){
 		if(instance_exists(selectedUnit)){

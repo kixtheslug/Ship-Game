@@ -13,35 +13,97 @@ if(!Game_Camera.paused && !Game_Camera.selectMode){ //dont work if paused
 	
 	if(playerUnit && selected){ //MANUAL CONTROLS
 		//directional movement
-		if (keyboard_check(ord("W")) && !dashing && !lostControl){ //move up
-			motion_add(image_angle, movespd);
-			moving = true;
-		}
-		if (keyboard_check(ord("Q")) && !dashing && !lostControl){ //strafe left
-			motion_add(image_angle+90, movespd);
-			moving = true;
-		}
-		if (keyboard_check(ord("E")) && !dashing && !lostControl){ //strafe right
-			motion_add(image_angle-90, movespd);
-			moving = true;
-		}
-		if (keyboard_check(ord("S")) && !dashing && !lostControl){ //reverse
-			motion_add(image_angle, -movespd);
-			moving = true;
+		if(!dashing && !lostControl){
+			if(smartTarget == noone){ //move normally with rotation
+				if (keyboard_check(ord("W"))){ //move up
+					motion_add(image_angle, movespd);
+					moving = true;
+				}
+				if (keyboard_check(ord("Q"))){ //strafe left
+					motion_add(image_angle+90, movespd);
+					moving = true;
+				}
+				if (keyboard_check(ord("E"))){ //strafe right
+					motion_add(image_angle-90, movespd);
+					moving = true;
+				}
+				if (keyboard_check(ord("S"))){ //reverse
+					motion_add(image_angle, -movespd);
+					moving = true;
+				}
+				//rotation
+				if (keyboard_check(ord("A"))){ //rotate left
+					image_angle += rotatespd
+				}
+				if (keyboard_check(ord("D"))){ //rotate right
+					image_angle -= rotatespd
+				}
+				
+				if (keyboard_check_pressed(ord("T"))){
+					var potentialTarget = instance_nearest(x,y,Par_enemy);
+					if(distance_to_object(potentialTarget) <= viewRad){
+						smartTarget = potentialTarget; //select smart target
+					} else{
+						messageNoTarget = true;
+						alarm[3] = messageTime;
+					}
+				}
+			
+			} else if (instance_exists(smartTarget)){ //move with WASD and always rotate towards the target
+				//RotateToTarget(self, smartTarget, rotatespd, 1);
+				image_angle = point_direction(x, y, smartTarget.x, smartTarget.y);
+				
+				if (keyboard_check_pressed(ord("T"))) smartTarget = noone; //clear smart target
+				
+				if (keyboard_check(ord("W"))){ //move up
+					motion_add(image_angle, movespd);
+					moving = true;
+				}
+				if (keyboard_check(ord("A"))){ //strafe left
+					motion_add(image_angle+90, movespd);
+					moving = true;
+				}
+				if (keyboard_check(ord("D"))){ //strafe right
+					motion_add(image_angle-90, movespd);
+					moving = true;
+				}
+				if (keyboard_check(ord("S"))){ //reverse
+					motion_add(image_angle, -movespd);
+					moving = true;
+				}
+			} else smartTarget = noone; //for when the target dies
 		}
 
-		//dash
-		if (keyboard_check(vk_shift) && !lostControl){
+		//skills
+		if (keyboard_check(vk_shift) && !lostControl && canUseSkill){
 			switch (skill){
 				case Game_ListHandler.skills.Dash:
-					dashing = true
+					if(skillDuration>0){
+						dashing = true
+						skillDuration--;
+					} else canUseSkill = false;
 					break;
+					
+				case Game_ListHandler.skills.Cloak:
+					if(skillDuration>0){
+						cloaked = true
+						skillDuration--;
+					} else canUseSkill = false;
+					break;
+					
 				case Game_ListHandler.skills.None:
 					break;
+					
 				default:
 					break;
 			}
-		} else dashing = false
+		} else {
+			dashing = false
+			cloaked = false
+			if(skillDuration<skillMaxDuration) skillDuration += skillRegen;
+			else if (skillDuration> skillMaxDuration) skillDuration = skillMaxDuration //make sure there cant be overflow
+			else canUseSkill = true //only runs if skillDuration = skillMaxDuration
+		}
 		if (dashing) {
 			motion_add(image_angle, dashspd);
 			part_emitter_region(global.P_System, PEmitter_Dash, x+15, x-15, y+15, y-15, ps_shape_rectangle, ps_distr_linear);
@@ -49,7 +111,7 @@ if(!Game_Camera.paused && !Game_Camera.selectMode){ //dont work if paused
 		} else part_emitter_clear(global.P_System, PEmitter_Dash);
 
 		//cap speed and decelerate
-		if (keyboard_check(ord("F"))){ //toggle dampening
+		if (keyboard_check_pressed(ord("F"))){ //toggle dampening
 			if (damp) damp = false;
 			else damp = true;
 		}
@@ -61,14 +123,6 @@ if(!Game_Camera.paused && !Game_Camera.selectMode){ //dont work if paused
 			part_emitter_stream(global.P_System, PEmitter_JetStream, Part_JetStream, 1);
 		} else part_emitter_clear(global.P_System, PEmitter_JetStream);
 		//part_particles_create(global.P_System, x, y, global.Part_JetStream, 1);
-
-		//rotation
-		if (keyboard_check(ord("A")) && !dashing && !lostControl){ //rotate left
-			image_angle += rotatespd
-		}
-		if (keyboard_check(ord("D")) && !dashing && !lostControl){ //rotate right
-			image_angle -= rotatespd
-		}
 
 		//shoot
 		if (keyboard_check(vk_space) && !lostControl){ //rotate left
@@ -155,7 +209,7 @@ if(!Game_Camera.paused && !Game_Camera.selectMode){ //dont work if paused
 //regular movement
 if (speed > speedCp && !dashing) speed = speedCp;
 else if (dashing) speed = speedCp*1.67; //dashing speed cap
-speed = max(speed-0.05,0)
+if (damp) speed = max(speed-0.05,0)
 
 //lock to gamemap
 MapBorderCollision();

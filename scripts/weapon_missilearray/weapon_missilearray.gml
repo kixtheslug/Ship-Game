@@ -19,6 +19,10 @@ function Weapon_MissileArray(origin, dir, isEnemy){
 				bullet.direction = dir+i*10-70;
 				bullet.image_angle = dir+i*10-70;
 			}
+			if(smartTarget != noone){
+				bullet.target = smartTarget;
+				bullet.targetLock = true;
+			}
 			bullet.speed = Game_ListHandler.missilearray_speed;
 			bullet.owner = self
 			bullet.team = team

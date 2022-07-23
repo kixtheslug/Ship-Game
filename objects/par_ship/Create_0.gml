@@ -19,6 +19,7 @@ damp = true;
 dashing = false;
 lostControl = false;
 cloaked = false;
+smartTarget = noone;
 
 //weapons
 weaponType = Game_ListHandler.weaponList.peashooter;
@@ -26,8 +27,14 @@ canShoot = true;
 canShootSec = true; //for secondary weapons if it has those
 lastSide = 0; //for weapons that fire out of alternating sides
 
-//AI
+//Skills
 skill = Game_ListHandler.fighter_skill;
+skillMaxDuration = Game_ListHandler.fighter_skill_duration*room_speed;
+skillDuration = skillMaxDuration;
+skillRegen = Game_ListHandler.fighter_skill_regen;
+canUseSkill = false;
+
+//AI
 support = false;
 stationary = false;
 team = Game_ListHandler.teamList.hostile;
@@ -49,9 +56,14 @@ distanceToExplore = random_range(90,90);
 exploreX = x + lengthdir_x(distanceToExplore, angleToExplore);
 exploreY = y + lengthdir_y(distanceToExplore, angleToExplore);
 
-//built in var
+//misc
 image_speed = 0;
 speed = 0;
+targetRot = 0; //for the rotating reticule on the smart targetting
+
+messageTime = 1.5*room_speed;
+messageNoTarget = false;
+messageNum = 0; //number of messages on screen
 
 /*----PARTICLES----*/
 //Jetstream particles

@@ -17,6 +17,7 @@ PRIMARY FEATURES:
 Damaged things smoke
 Make missiles detect turrets
 loss condition when all player units are dead
+message manager object
 
 CONTENT:
 -Support ship
@@ -33,3 +34,5 @@ make player an enemy units use the same code
 When turrets are destroyed just draw the base and not the turret head
 quick cycle units in select
 debug mode
+skill bar
+smart targetting

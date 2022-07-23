@@ -14,6 +14,11 @@ hp = maxhp;
 //weapons
 weaponType = Game_ListHandler.scout_weaponType;
 
-//AI
+//skill
 skill = Game_ListHandler.scout_skill;
+skillMaxDuration = Game_ListHandler.scout_skill_duration*room_speed;
+skillDuration = skillMaxDuration
+skillRegen = Game_ListHandler.scout_skill_regen;
+
+//AI
 viewRad = Game_ListHandler.scout_viewRad

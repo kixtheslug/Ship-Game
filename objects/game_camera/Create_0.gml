@@ -29,7 +29,9 @@ surface_resize(application_surface,display_width,display_height);
 
 //Zoom
 zoom_level = 1;
+target_zoom_level = zoom_level;
 zoom_rate = 0.25;
+zoom_buffer = 0.01;
 
 //UI
 display_set_gui_size(camera_width,camera_height);

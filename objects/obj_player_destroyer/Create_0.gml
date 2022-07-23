@@ -14,6 +14,11 @@ hp = maxhp;
 //weapons
 weaponType = Game_ListHandler.destroyer_weaponType;
 
-//AI
+//skill
 skill = Game_ListHandler.destroyer_skill;
+skillMaxDuration = Game_ListHandler.destroyer_skill_duration*room_speed;
+skillDuration = skillMaxDuration;
+skillRegen = Game_ListHandler.destroyer_skill_regen;
+
+//AI
 viewRad = Game_ListHandler.destroyer_viewRad;

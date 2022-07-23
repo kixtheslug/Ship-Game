@@ -13,9 +13,16 @@ enum AImodes {
 	Flee = 3
 }
 
+/*
+//////////////////////////////////////////////
+SKILLS
+//////////////////////////////////////////////
+*/
 enum skills {
 	None = 0,
-	Dash = 1
+	Dash = 1,
+	Link = 2,
+	Cloak = 3
 }
 
 /*
@@ -112,6 +119,8 @@ fighter_maxHP = 50;
 fighter_weaponType = weaponList.peashooter;
 fighter_viewRad = 1200;
 fighter_skill = skills.Dash;
+fighter_skill_duration = 2;
+fighter_skill_regen = 0.25;
 
 //Destroyer
 destroyer_moveSpeed = 0.07;
@@ -122,6 +131,8 @@ destroyer_maxHP = 125;
 destroyer_weaponType = weaponList.missilearray;
 destroyer_viewRad = 1000;
 destroyer_skill = skills.Dash;
+destroyer_skill_duration = 1;
+destroyer_skill_regen = 0.1;
 
 //Assault
 assault_moveSpeed = 0.07;
@@ -132,6 +143,8 @@ assault_maxHP = 125;
 assault_weaponType = weaponList.missilefront;
 assault_viewRad = 1350;
 assault_skill = skills.Dash;
+assault_skill_duration = 1;
+assault_skill_regen = 0.1;
 
 //Scout
 scout_moveSpeed = 0.8;
@@ -142,6 +155,8 @@ scout_maxHP = 20;
 scout_weaponType = weaponList.gatling;
 scout_viewRad = 2000;
 scout_skill = skills.Dash;
+scout_skill_duration = 4;
+scout_skill_regen = 0.5;
 
 //Utility
 utility_moveSpeed = 0.5;
@@ -151,4 +166,4 @@ utility_speedCap = 6;
 utility_maxHP = 75;
 utility_weaponType = weaponList.none;
 utility_viewRad = 800;
-utility_skill = skills.Dash;
+utility_skill = skills.Link;
