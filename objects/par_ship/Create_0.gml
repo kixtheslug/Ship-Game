@@ -26,6 +26,7 @@ weaponType = Game_ListHandler.weaponList.peashooter;
 canShoot = true;
 canShootSec = true; //for secondary weapons if it has those
 lastSide = 0; //for weapons that fire out of alternating sides
+weapon_duration = 0;
 
 //Skills
 skill = Game_ListHandler.fighter_skill;
@@ -33,6 +34,12 @@ skillMaxDuration = Game_ListHandler.fighter_skill_duration*room_speed;
 skillDuration = skillMaxDuration;
 skillRegen = Game_ListHandler.fighter_skill_regen;
 canUseSkill = false;
+
+tethered = false;
+tetherable = false; //if the unit can be tethered
+tetherRange = 200;
+tetherHeal = 0.05;
+tetherTarget = noone;
 
 //AI
 support = false;
@@ -61,10 +68,6 @@ image_speed = 0;
 speed = 0;
 targetRot = 0; //for the rotating reticule on the smart targetting
 
-messageTime = 1.5*room_speed;
-messageNoTarget = false;
-messageNum = 0; //number of messages on screen
-
 /*----PARTICLES----*/
 //Jetstream particles
 PEmitter_JetStream = part_emitter_create(global.P_System);
@@ -88,3 +91,27 @@ part_type_life(Part_Dash, 20, 20);
 part_type_direction(Part_Dash, image_angle, image_angle, 0, 0);
 part_type_orientation(Part_Dash, image_angle, image_angle, 0, 0, 0);
 part_type_speed(Part_Dash, 2, 2, -0.50, 0);
+
+//Smoke particles
+PEmitter_Smoke = part_emitter_create(global.P_System);
+Part_Smoke = part_type_create();
+part_type_shape(Part_Smoke, pt_shape_disk);
+part_type_size(Part_Smoke, 0.05, 0.2, -0.01, 0);
+part_type_color1(Part_Smoke, c_white);
+part_type_alpha3(Part_Smoke, 0.75, 0.33, 0);
+part_type_life(Part_Smoke, 15, 15);
+part_type_direction(Part_Smoke, 0, 360, 0, 0);
+part_type_orientation(Part_Smoke, 0, 360, 0, 0, 0);
+part_type_speed(Part_Smoke, 2, 2, -0.05, 0);
+
+//Heal particles
+PEmitter_Heal = part_emitter_create(global.P_System);
+Part_Heal = part_type_create();
+part_type_sprite(Part_Heal, part_heal,1,1,0);
+part_type_size(Part_Heal, 1, 0.5, -0.01, 0);
+part_type_color1(Part_Heal, c_white);
+part_type_alpha3(Part_Heal, 0.75, 0.33, 0);
+part_type_life(Part_Heal, 15, 15);
+part_type_direction(Part_Heal, 0, 360, 0, 0);
+part_type_speed(Part_Heal, 2, 2, -0.05, 0);
+//part_type_gravity(Part_Heal, .2, 90);

@@ -25,3 +25,5 @@ if (global.showAdvancedInfo) {
 	draw_set_alpha(1);
 	draw_text(x,y-50,string(direction));
 }
+
+//HitFlash(); //flash white if it takes damage

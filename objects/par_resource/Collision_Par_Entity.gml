@@ -6,4 +6,6 @@ if(!lostControl){
 
 	lostControl = true;
 	alarm[11] = room_speed*2;
+	
+	flashAlpha = 1;
 }

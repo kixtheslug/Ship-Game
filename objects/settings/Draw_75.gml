@@ -2,7 +2,7 @@
 draw_set_font(fnt_pixel_medium);
 draw_set_halign(fa_center);
 
-if(settingsActive){
+if(settingsActive && instance_exists(Game_Camera)){
 	instance_deactivate_object(MenuHandler);
 	
 	/*--------------------------------------
@@ -56,7 +56,7 @@ if(keyboard_check_pressed(ord("U"))){
 }
 
 
-if(Game_Camera.paused){
+if(instance_exists(Game_Camera) && Game_Camera.paused){
 	//invincible player
 	if(keyboard_check_pressed(ord("1"))){
 		if(dev_invinciblePlayer) dev_invinciblePlayer = false;

@@ -1,4 +1,5 @@
 owner = noone;
 enemy = false;
+duration = room_speed*2;
 
-alarm[0] = room_speed*2; //automatically destroys self after 10 seconds
+alarm[0] = duration; //automatically destroys self after 10 seconds

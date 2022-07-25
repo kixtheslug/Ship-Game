@@ -5,4 +5,6 @@ if(other.owner != self && other.team != team){ //maybe allow friendly fire?
 	
 	if (!invincible) hp-=other.damage;
 	instance_destroy(other);
+	
+	flashAlpha = 1;
 }

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description
 switch(team){
 	case Game_ListHandler.teamList.player:
 		if(instance_exists(Par_enemy) && !targetLock) target = instance_nearest(x,y,Par_enemy);

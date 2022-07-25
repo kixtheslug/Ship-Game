@@ -13,6 +13,12 @@ function ActivateWeapon(origin, dir, isEnemy){
 		case Game_ListHandler.weaponList.gatling:
 			Weapon_Gatling(origin, dir, isEnemy);
 			break;
+		case Game_ListHandler.weaponList.minelayer:
+			Weapon_Minelayer(origin, dir, isEnemy);
+			break;
+		case Game_ListHandler.weaponList.beam:
+			Weapon_Beam(origin, dir, isEnemy);
+			break;
 		case Game_ListHandler.weaponList.none:
 			break;
 		default:

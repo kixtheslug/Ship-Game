@@ -4,4 +4,6 @@ if(other.team != team){ //do not collide with friendlies
 
 	lostControl = true;
 	alarm[11] = room_speed*2;
+	
+	flashAlpha = 1;
 }

@@ -6,14 +6,14 @@ function Ship_FleeAI(){
 	if(!lostControl){ //disable AI if lost control
 		RotateAwayTarget(self, point_direction(x, y, target.x, target.y), rotatespd, 1);
 	
-		/*if (distanceToPlayer <= viewRad/2 && differenceInAnglesToFlee<=90){
+		if (distanceToPlayer <= viewRad/2){
 			dashing = true;
 			moving = false;
 		} else {
 			motion_add(image_angle, movespd);
 			moving = true
 			dashing = false;
-		}*/
+		}
 	}
 	
 	 wantsToReturn = true;

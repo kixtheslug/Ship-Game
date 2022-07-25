@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UI",
-    "path": "folders/Sprites/UI.yy",
+    "name": "Game",
+    "path": "folders/Sprites/UI/Game.yy",
   },
   "resourceVersion": "1.0",
   "name": "UI_smartTarget",

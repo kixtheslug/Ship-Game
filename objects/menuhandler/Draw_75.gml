@@ -27,10 +27,11 @@ if(room == Menu){
 	if(keyboard_check_pressed(vk_space)){
 		switch (currSel){
 			case 0: //continue
+				room_goto(Test_map); //temporary
 				break;
 				
 			case 1: //new game
-				room_goto(Test_map); //all of this needs work!
+				room_goto(Level_Select);
 				break;
 				
 			case 2: //settings

@@ -8,5 +8,7 @@ if((other.team != team) || team==Game_ListHandler.teamList.none){ //do not colli
 
 		lostControl = true;
 		alarm[11] = room_speed*2;
+		
+		flashAlpha = 1;
 	}
 }

@@ -1,7 +1,6 @@
 PRIMARY FEATURES:
 -Display stats of ship when hovering
 	-display stats of enemy ships if hovering over them as well
--Dash cooldown and skill system
 -Weapon select
 -Capturing bases
 -Display outline around ships to draw team color (DONE)
@@ -9,30 +8,32 @@ PRIMARY FEATURES:
 -player ships use AI (DONE)
 	-Toggle AI
 	-make outline change to green if enabled (DONE)
--Fix enemy flee AI
 -menus
 	-main menu
 	-control changing
 		-presets
-Damaged things smoke
 Make missiles detect turrets
 loss condition when all player units are dead
-message manager object
 
 CONTENT:
 -Support ship
 	-heals enemy crew
 	-new AI
+-Stealth ship
 
 COMPLETE:
--Destroyer/Assault ship
+Destroyer/Assault ship
 	-heat seeking missile
--Scout ship
+Scout ship
 	-gatling gun
--Change selected unit when player unit dies
+Change selected unit when player unit dies
 make player an enemy units use the same code
 When turrets are destroyed just draw the base and not the turret head
 quick cycle units in select
 debug mode
-skill bar
+-Dash cooldown and skill system
 smart targetting
+Damaged things smoke
+message manager object
+Minelayer ship
+Fix enemy flee AI

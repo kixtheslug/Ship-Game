@@ -1,8 +1,11 @@
 /// @description Initialize boundary
 
 //change these per level
-shapes_list = ["Square"];
-shape = shapes_list[0];
+areaType = Game_ListHandler.tileTypes.Nothing;
+areaWidth = 8000;
+areaHeight = 8000;
+shape = "Square";
+team = Game_ListHandler.teamList.none;
 
 switch (shape){
 	case "Square":

@@ -1,14 +1,7 @@
 draw_set_alpha(1);
 
 if(selected && playerUnit && !Game_Camera.paused){
-	//draw error messages
-	if(messageNoTarget){
-		draw_set_halign(fa_center)
-		draw_text(Game_Camera.camera_width/2,Game_Camera.camera_height/2+30,"Cannot find valid target. Must be within range of an enemy.");
-		draw_set_halign(fa_left)
-	}
-	
-	if(skill == skills.Dash){ //draw healthbar in the right position
+	if(skill == skills.Dash || skill == skills.Cloak){ //draw healthbar in the right position
 		//draw healthbar
 		var currentHealth = (hp/maxhp)*100
 		draw_healthbar(10, Game_Camera.camera_height-20, 150, Game_Camera.camera_height-40, currentHealth, c_white, c_red, c_red, 0, 1, 1);

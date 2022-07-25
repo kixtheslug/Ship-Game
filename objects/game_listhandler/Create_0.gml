@@ -13,6 +13,13 @@ enum AImodes {
 	Flee = 3
 }
 
+enum tileTypes {
+	Nothing = 0,
+	Space = 1,
+	Asteroid = 2
+}
+numTileTypes = 2;
+
 /*
 //////////////////////////////////////////////
 SKILLS
@@ -21,7 +28,7 @@ SKILLS
 enum skills {
 	None = 0,
 	Dash = 1,
-	Link = 2,
+	Tether = 2,
 	Cloak = 3
 }
 
@@ -57,7 +64,9 @@ enum weaponList{
 	peashooter = 1,
 	missilearray = 2,
 	missilefront = 3,
-	gatling = 4
+	gatling = 4,
+	minelayer = 5,
+	beam = 6
 }
 
 //Peashooter
@@ -79,12 +88,24 @@ missilefront_reload = 1.5;
 missilefront_sec_speed = 20;
 missilefront_sec_damage = 5;
 missilefront_sec_reload = 0.25;
-missilearray_sec_shots = 2;
 
 //Gatling
 gatling_speed = 30;
 gatling_damage = 5;
 gatling_reload = 0.1;
+
+//Minelayer
+minelayer_damage = 15;
+minelayer_reload = 1;
+minelayer_duration = 30*room_speed;
+minelayer_health = 35;
+
+//Beam
+beam_length = 1000;
+beam_damage = 2;
+beam_reload = 5;
+beam_width = 5;
+beam_duration = 3*room_speed;
 
 /*
 //////////////////////////////////////////////
@@ -97,7 +118,9 @@ enum shipList{
 	destroyer = 2,
 	assault = 3,
 	scout = 4,
-	utility = 5
+	stealth = 5,
+	utility = 6,
+	bomber = 7
 }
 
 //satellite
@@ -158,6 +181,28 @@ scout_skill = skills.Dash;
 scout_skill_duration = 4;
 scout_skill_regen = 0.5;
 
+//Bomber
+bomber_moveSpeed = 0.07;
+bomber_turnSpeed = 0.5;
+bomber_dashSpeed = 1;
+bomber_speedCap = 5;
+bomber_maxHP = 200;
+bomber_weaponType = weaponList.minelayer;
+bomber_viewRad = 1000;
+bomber_skill = skills.None;
+
+//Stealth
+stealth_moveSpeed = 1;
+stealth_turnSpeed = 2;
+stealth_dashSpeed = 2;
+stealth_speedCap = 9;
+stealth_maxHP = 30;
+stealth_weaponType = weaponList.beam;
+stealth_viewRad = 800;
+stealth_skill = skills.Cloak;
+stealth_skill_duration = 12;
+stealth_skill_regen = 0.5;
+
 //Utility
 utility_moveSpeed = 0.5;
 utility_turnSpeed = 5;
@@ -166,4 +211,4 @@ utility_speedCap = 6;
 utility_maxHP = 75;
 utility_weaponType = weaponList.none;
 utility_viewRad = 800;
-utility_skill = skills.Link;
+utility_skill = skills.Tether;
